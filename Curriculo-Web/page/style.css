@@ -81,15 +81,14 @@ main{
 }
 
 main img{
-    display: flex;
+    display: block;
     height: 250px;
     width: 250px;
     border-radius: 50%;
     grid-area: i;
     justify-content: center;
     align-items: center;
-    margin-left: 15px;
-    margin-top: 5px;
+    margin: auto;
     border: 5px solid rgb(19, 19, 19)
 }
 
@@ -99,6 +98,11 @@ main img{
 }
 
 .about > title{
+    display: block;
+    text-align: center;
+}
+
+.ttle{
     display: block;
     text-align: center;
 }
@@ -115,14 +119,14 @@ main img{
 
 .comp ul{
    grid-area: t1;
-   margin-left: 50px;
+    text-align: center;
+    padding: 0px;
 }
 
 .comp li{
-    margin-left: 30px;
     grid-area: t1;
-    padding: 20px;
     list-style-type: none;
+    padding: 20px;
 }
 .t2{
     margin: 10px 35px 0px 35px;
@@ -182,5 +186,38 @@ footer button{
         height: 150px;
     }
 
+    .aside{
+        display: none;
+    }
+
+    @media(max-width: 768px){
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+                "i"
+                "o"
+                "t1"
+                "t2"
+            ;
+        }
+        .comp ul {
+            display: block;
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            padding: 0;
+            margin: 0px;
+            text-align: center;
+        }
+
+        .ttle{
+            display: block;
+            text-align: center;
+        }
+
+
+    }
     
 }
