@@ -11,6 +11,6 @@ function redirectLink(){
 
 function redirectGit(){
     event.preventDefault()
-    window.location.href = "#"
+    window.location.href = "https://github.com/CaioCsar"
 
 }
